@@ -1,0 +1,42 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #E12433;
+  height: 120px;
+}
+
+header img {
+  align-self: center;
+  padding-left: 100px;
+}
+
+nav {
+  font-family: "Tenor Sans", sans-serif;
+  padding-right: 100px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  color: #ffffff;
+  padding-top: 25px;
+}
+
+nav li {
+  padding: 10px;
+}
+
+nav li::after {
+  content: "|";
+  margin-left: 20px;
+}
+
+nav li:nth-child(1)::before {
+  content: "|";
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+}

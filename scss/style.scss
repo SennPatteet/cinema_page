@@ -1,81 +1,51 @@
-// VARIABLES ---------------------------------------------------------
+$navfont:'Tenor Sans', sans-serif;
+$white: #ffffff;
+$red: #E12433;
 
-$color: #CA6899;
-$color2: #389b93;
-$font: 'Lobster', cursive;
+// HEADER ---------------------------------------------------------
 
-// MIXIN ---------------------------------------------------------
-
-@mixin container_center {
-  margin: auto;
-  width: 60%;
-}
-
-@mixin nav_flex {
+header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  background-color: $red;
+  height: 120px;
+
+  img {
+    align-self: center;
+    padding-left: 100px;
+  }
 }
 
-// CODE ---------------------------------------------------------
-
-#container {
-  @include container_center;
-}
-
-
-body {
-  background-color: $color;
-}
-
-h1 {
-  font-family: $font;
-  text-align: center;
-}
-
-// NEST ---------------------------------------------------------
+// NAVIGATION ---------------------------------------------------------
 
 nav {
+  font-family: $navfont;
+  padding-right: 100px;
 
   ul {
-    @include nav_flex;
+    display: flex;
     list-style: none;
-    padding: 0px;
-
-    :nth-child(3) {
-      background-color: $color2;
-    }
-
+    color: $white;
+    padding-top: 25px;
   }
 
   li {
     padding: 10px;
   }
 
+  li::after {
+    content: "|";
+    margin-left: 20px;
+  }
+
+  li:nth-child(1)::before {
+    content: "|";
+    margin-right: 20px;
+  }
+
+
   a {
     text-decoration: none;
+    color: $white;
   }
 }
-
-// EXTEND ---------------------------------------------------------
-
-%test {
-  h2 {
-    color: $color2;
-  }
-
-  p {
-    line-height: 1.5;
-  }
-}
-
-.extend1 {
-  @extend %test;
-}
-
-.extend2 {
-  @extend %test;
-}
-
-// PARTIAL (see _partial.scss) ---------------------------------------------------------
-
-@import 'partial';
