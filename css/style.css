@@ -158,7 +158,7 @@ nav ul li a:hover::before, nav ul li a:focus::before {
   font-family: helvetica, arial;
   font-weight: lighter;
   font-size: 1em;
-  margin-top: 3px;
+  margin-top: 4px;
   padding-left: 4px;
   color: #86868A;
 }
