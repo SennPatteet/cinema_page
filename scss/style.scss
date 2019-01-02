@@ -89,6 +89,7 @@ h1 {
 
 .new_movies {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   h2 {width: 200px; font-family: $navfont; font-size: 1em; margin-bottom: 0px; padding-left: 4px;}
