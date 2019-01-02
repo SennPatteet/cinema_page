@@ -15,10 +15,6 @@ header {
   height: 120px;
 }
 
-header:hover {
-  background-color: #E12433;
-}
-
 header img {
   width: 128px;
   height: 81px;
@@ -137,6 +133,10 @@ h1 {
   transform: scale(1.02);
 }
 
+footer {
+  background-color: #E12433;
+}
+
 .movies ul {
   list-style: none;
   padding: 0px;
@@ -172,4 +172,28 @@ h1 {
 
 .title {
   font-family: "Tenor Sans", sans-serif;
+}
+
+.footer_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.footer_container ul {
+  list-style: none;
+}
+
+.footer_container ul li {
+  text-align: center;
+}
+
+.footer_container ul li a {
+  text-decoration: none;
+  font-family: helvetica, arial;
+  font-weight: lighter;
+}
+
+.footer_block {
+  width: 200px;
 }

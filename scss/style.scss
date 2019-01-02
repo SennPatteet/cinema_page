@@ -21,10 +21,6 @@ header {
   background-color: $red;
   height: 120px;
 
-    &:hover {
-      background-color: $red;
-    }
-
     img {
       width: 128px;
       height: 81px;
@@ -120,6 +116,10 @@ h1 {
 
 // FOOTER ---------------------------------------------------------
 
+footer {
+  background-color: $red;
+}
+
 .movies {
   ul {
     list-style: none;
@@ -158,4 +158,28 @@ h1 {
 
 .title {
   font-family: $navfont;
+}
+
+.footer_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  ul {
+    list-style: none;
+
+    li {
+      text-align: center;
+
+      a {
+        text-decoration: none;
+        font-family: helvetica, arial;
+        font-weight: lighter;
+      }
+    } // end of li
+  } // end of ul
+} // end of .footer_container
+
+.footer_block {
+  width: 200px;
 }
