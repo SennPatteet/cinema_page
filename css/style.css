@@ -19,6 +19,13 @@ header:hover {
   background-color: #E12433;
 }
 
+header img {
+  width: 128px;
+  height: 81px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
 nav {
   font-family: "Tenor Sans", sans-serif;
   padding-right: 20px;
