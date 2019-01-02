@@ -13,6 +13,10 @@ $grey: #86868A;
   width: 70%;
 }
 
+body {
+  background-color: $white;
+}
+
 // HEADER ---------------------------------------------------------
 
 header {
@@ -26,8 +30,8 @@ header {
       height: 81px;
       margin-top: 20px;
       margin-left: 20px;
-    }
-}
+    } // end of img
+} // end of header
 
 
 // NAVIGATION ---------------------------------------------------------
@@ -82,18 +86,39 @@ nav {
 
 // NEW MOVIES ---------------------------------------------------------
 
-h1 {
+.line {
   border-bottom: 2px solid $red;
   padding-top: 10px;
   padding-bottom: 5px;
   text-align: center;
   font-family: $navfont;
-}
+  margin-bottom: 20px;
+
+  h1 {
+    margin-bottom: 0px;
+  } // end of h1
+
+  input {
+    outline: none;
+    border: solid 2px $grey;
+    border-radius: 5px;
+    margin: 10px;
+    caret-color: $red;
+    padding-left: 6px;
+  } // end of input
+
+  ::placeholder {
+    opacity: 0.4;
+  }
+
+} // end of line
 
 .new_movies {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  .bumblebee {margin-left: 4px;}
 
   h2 {width: 200px; font-family: $navfont; font-size: 1em; margin-bottom: 0px; padding-left: 4px;}
   h3 {width: 200px; font-family: helvetica, arial; font-weight: lighter; font-size: 1em; margin-top: 3px; padding-left: 4px; color: $grey;}
@@ -106,7 +131,10 @@ h1 {
 .all_movies {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+
+  .queen {margin-left: 4px;}
+  .grinch {margin-left: 4px;}
 
   h2 {width: 200px; font-family: $navfont; font-size: 1em; margin-bottom: 0px; padding-left: 4px;}
   h3 {width: 200px; font-family: helvetica, arial; font-weight: lighter; font-size: 1em; margin-top: 3px; padding-left: 4px; color: $grey;}
@@ -118,9 +146,9 @@ h1 {
 
 footer {
   background-color: $red;
-}
+  padding: 20px;
 
-.movies {
+.footer_block {
   ul {
     list-style: none;
     padding: 0px;
@@ -132,54 +160,64 @@ footer {
   } //end of ul
 } //end of .movies
 
-.cinemas {
-  ul {
-    list-style: none;
-    padding: 0px;
-    a {
-      text-decoration: none;
-      font-family: helvetica, arial;
-      font-weight: lighter;
-    } //end of a
-  } //end of ul
-} //end of .cinemas
-
-.events {
-  ul {
-    list-style: none;
-    padding: 0px;
-    a {
-      text-decoration: none;
-      font-family: helvetica, arial;
-      font-weight: lighter;
-    } //end of a
-  } //end of ul
-} //end of .cinemas
-
 .title {
   font-family: $navfont;
+  font-size: 15px;
+  color: $white;
+}
+
+span {
+  font-family: helvetica, arial;
+  font-weight: 400;
 }
 
 .footer_container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+
+  .title {
+    margin-bottom: 15px;
+  }
 
   ul {
     list-style: none;
 
     li {
-      text-align: center;
+      text-align: left;
 
       a {
         text-decoration: none;
         font-family: helvetica, arial;
-        font-weight: lighter;
-      }
+        font-size: 12px;
+        color: $white;
+        line-height: 1.7;
+        position: relative;
+
+        &:hover, &:focus, &:active {
+            color: $white;
+            text-decoration: none;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            height: 1px;
+            width: 100%;
+            background-color: #fff;
+            transform-origin: right top;
+            transform: scale(0, 1);
+            transition: color 0.1s,transform 0.2s ease-out;
+        }
+
+        &:hover::before, &:focus::before {
+            transform-origin: left top;
+            transform: scale(1, 1);
+        }
+
+      } // end of a
     } // end of li
   } // end of ul
 } // end of .footer_container
-
-.footer_block {
-  width: 200px;
-}
+} // end of footer

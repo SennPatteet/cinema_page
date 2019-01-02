@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Tenor+Sans" rel="stylesheet">
+  <link rel="icon" href="img/logo.png">
 
 
   <!-- JAVASCRIPT --------------------------------------------------------->
@@ -39,7 +40,11 @@
 </header>
 
 <div id="container">
-  <h1> NEW MOVIES </h1>
+
+  <div class="line">
+    <h1> NEW MOVIES </h1>
+  <i class="fas fa-search"></i>  <input type="search" name="movie" placeholder="Search">
+  </div>
 
   <div class="new_movies">
 
@@ -70,7 +75,10 @@
   </div>  <!-- end of new_movies -->
 
 
-  <h1> ALL MOVIES </h1>
+  <div class="line">
+    <h1> ALL MOVIES </h1>
+  <i class="fas fa-search"></i>  <input type="search" name="movie" placeholder="Search">
+  </div>
 
   <div class="all_movies">
 
@@ -128,40 +136,51 @@
 
 <footer>
   <div class="footer_container">
-    <div class="footer_block">
-      <ul>
-        <li class="title" style="font-weight: bold;">Movies</li>
-        <li><a href="#">Aquaman</a></li>
-        <li><a href="#">A Star Is Born</a></li>
-        <li><a href="#">Bohemian Rhapsody</a></li>
-        <li><a href="#">Bumblebee</a></li>
-        <li><a href="#">Mary Poppins Returns</a></li>
-        <li><a href="#">Mortal Engines</a></li>
-        <li><a href="#">Spider-Man: Into the Spider-Verse</a></li>
-        <li><a href="#">The Grinch</a></li>
-      </ul>
-    </div>  <!-- end of movies -->
 
     <div class="footer_block">
       <ul>
-        <li class="title" style="font-weight: bold;">Cinemas</li>
+        <li class="title" style="font-weight: bold;">GENRES</li>
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Comedy</a></li>
+        <li><a href="#">Drama</a></li>
+        <li><a href="#">Horror</a></li>
+      </ul>
+
+      <ul>
+          <li style="font-weight: bold;"><a href="#"><span>ALL GENRES</span></a></li>
+      </ul>
+
+    </div>  <!-- end of block -->
+
+    <div class="footer_block">
+      <ul>
+        <li class="title" style="font-weight: bold;">CINEMAS</li>
         <li><a href="#">Antwerp</a></li>
         <li><a href="#">Brussels</a></li>
         <li><a href="#">Limburg</a></li>
         <li><a href="#">Ghent</a></li>
-        <li style="font-weight: bold;"><a href="#">All Cinemas</a></li>
       </ul>
-    </div>  <!-- end of cinemas -->
+
+      <ul>
+          <li class="more" style="font-weight: bold;"><a href="#"><span>ALL CINEMAS</span></a></li>
+      </ul>
+
+    </div>  <!-- end of block -->
 
     <div class="footer_block">
       <ul>
-        <li class="title" style="font-weight: bold;">Events</li>
+        <li class="title" style="font-weight: bold;">EVENTS</li>
         <li><a href="#">Avant-Premières</a></li>
         <li><a href="#">Kids at the Movies</a></li>
         <li><a href="#">Ladies at the Movies</a></li>
-        <li style="font-weight: bold;"><a href="#">All Events</a></li>
+        <li><a href="#">Viva l'Opera</a></li>
       </ul>
-    </div>  <!-- end of events -->
+
+      <ul>
+          <li class="more" style="font-weight: bold;"><a href="#"><span>ALL EVENTS</span></a></li>
+      </ul>
+
+    </div>  <!-- end of block -->
 
 
 
