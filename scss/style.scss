@@ -24,7 +24,6 @@ header {
     &:hover {
       background-color: $red;
     }
-  }
 }
 
 // NAVIGATION ---------------------------------------------------------
@@ -126,6 +125,18 @@ h1 {
 } //end of .movies
 
 .cinemas {
+  ul {
+    list-style: none;
+    padding: 0px;
+    a {
+      text-decoration: none;
+      font-family: helvetica, arial;
+      font-weight: lighter;
+    } //end of a
+  } //end of ul
+} //end of .cinemas
+
+.events {
   ul {
     list-style: none;
     padding: 0px;

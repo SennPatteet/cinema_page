@@ -15,12 +15,7 @@ header {
   height: 120px;
 }
 
-header img {
-  align-self: center;
-  padding: 2px;
-}
-
-header img:hover {
+header:hover {
   background-color: #E12433;
 }
 
@@ -81,6 +76,7 @@ h1 {
 
 .new_movies {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -151,6 +147,17 @@ h1 {
 }
 
 .cinemas ul a {
+  text-decoration: none;
+  font-family: helvetica, arial;
+  font-weight: lighter;
+}
+
+.events ul {
+  list-style: none;
+  padding: 0px;
+}
+
+.events ul a {
   text-decoration: none;
   font-family: helvetica, arial;
   font-weight: lighter;
