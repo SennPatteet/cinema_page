@@ -1,6 +1,17 @@
 $navfont:'Tenor Sans', sans-serif;
 $white: #ffffff;
 $red: #E12433;
+$grey: #86868A;
+
+#container {
+  margin: auto;
+  width: 70%;
+}
+
+.footer_container {
+  margin: auto;
+  width: 70%;
+}
 
 // HEADER ---------------------------------------------------------
 
@@ -10,9 +21,9 @@ header {
   background-color: $red;
   height: 120px;
 
-  img {
-    align-self: center;
-    padding-left: 100px;
+    &:hover {
+      background-color: $red;
+    }
   }
 }
 
@@ -20,32 +31,111 @@ header {
 
 nav {
   font-family: $navfont;
-  padding-right: 100px;
+  padding-right: 20px;
 
   ul {
     display: flex;
     list-style: none;
     color: $white;
     padding-top: 25px;
-  }
 
-  li {
-    padding: 10px;
-  }
+    li {
+      padding: 10px;
+      padding-left: 30px;
 
-  li::after {
-    content: "|";
-    margin-left: 20px;
-  }
+      a {
+        text-decoration: none;
+        color: $white;
+        position: relative;
+        padding: 9px 0;
+        transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
 
-  li:nth-child(1)::before {
-    content: "|";
-    margin-right: 20px;
-  }
+        &:hover, &:focus, &:active {
+            color: $white;
+            text-decoration: none;
+        }
 
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 3px;
+            height: 1px;
+            width: 100%;
+            background-color: #fff;
+            transform-origin: right top;
+            transform: scale(0, 1);
+            transition: color 0.1s,transform 0.2s ease-out;
+        }
 
-  a {
-    text-decoration: none;
-    color: $white;
-  }
+        &:hover::before, &:focus::before {
+            transform-origin: left top;
+            transform: scale(1, 1);
+        }
+
+      } // end of a
+    } // end of li
+  } // end of ul
+} // end of nav
+
+// NEW MOVIES ---------------------------------------------------------
+
+h1 {
+  border-bottom: 2px solid $red;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  text-align: center;
+  font-family: $navfont;
+}
+
+.new_movies {
+  display: flex;
+  justify-content: space-between;
+
+  h2 {width: 200px; font-family: $navfont; font-size: 1em; margin-bottom: 0px; padding-left: 4px;}
+  h3 {width: 200px; font-family: helvetica, arial; font-weight: lighter; font-size: 1em; margin-top: 3px; padding-left: 4px; color: $grey;}
+  img:hover {transform: scale(1.02);}
+
+} // end of .new_movies
+
+// ALL MOVIES ---------------------------------------------------------
+
+.all_movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  h2 {width: 200px; font-family: $navfont; font-size: 1em; margin-bottom: 0px; padding-left: 4px;}
+  h3 {width: 200px; font-family: helvetica, arial; font-weight: lighter; font-size: 1em; margin-top: 3px; padding-left: 4px; color: $grey;}
+  img:hover {transform: scale(1.02);}
+
+} // end of .all_movies
+
+// FOOTER ---------------------------------------------------------
+
+.movies {
+  ul {
+    list-style: none;
+    padding: 0px;
+    a {
+      text-decoration: none;
+      font-family: helvetica, arial;
+      font-weight: lighter;
+    } //end of a
+  } //end of ul
+} //end of .movies
+
+.cinemas {
+  ul {
+    list-style: none;
+    padding: 0px;
+    a {
+      text-decoration: none;
+      font-family: helvetica, arial;
+      font-weight: lighter;
+    } //end of a
+  } //end of ul
+} //end of .cinemas
+
+.title {
+  font-family: $navfont;
 }
