@@ -1,1 +1,1 @@
-https://sennpatteet.github.io/cinema-page/
+https://sennpatteet.github.io/cinema_page/
